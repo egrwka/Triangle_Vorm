@@ -12,15 +12,15 @@ namespace Triangle_Vorm
         public double b; // 2st storka
         public double c; // 3th stroka
         public Triangle(double A, double B, double C) // Konstryktor
-        {
-            a = A;
+        { 
+            a = A; // Sozdaem s zadannqmi dlinami storon soglasno zadaniyu
             b = B;
             c = C;
         }
 
-        public string outputA()
+        public string outputA() // vqvodim storony A, dannqi metod vozrashaet strokovoe znachenie
         {
-            return Convert.ToString(a);
+            return Convert.ToString(a); // a - ssqlka na vnytrenne pole objekta klassa.
         }
 
         public string outputB()
@@ -32,14 +32,14 @@ namespace Triangle_Vorm
             return Convert.ToString(c);
         }
 
-        public double Perimeter()
+        public double Perimeter() // summa vsex storon tipa double
         {
             double p = 0;
-            p = a + b + c;
-            return p;
+            p = a + b + c; // vqchislenie
+            return p; // vozvrat
         }
 
-        public double Surface()
+        public double Surface() // analogichno perimetry
         {
             double s = 0;
             double p = 0;
@@ -48,7 +48,7 @@ namespace Triangle_Vorm
             return s;
         }
 
-        public double GetSetA
+        public double GetSetA // svoistvo pozvolyaeshee ystanovit libo izmenit znachenie storonq A
         {
             get
             { return a; }
@@ -70,11 +70,11 @@ namespace Triangle_Vorm
             { c = value; }
         }
 
-        public bool ExistTriange
+        public bool ExistTriange // svoistvo pozvolyaeshee ystanovit, sywestvyet li treygolnik s zadannqmi storonami
         {
             get
             {
-                if ((a > b + c) && (b > a + c) && (c > a + b))
+                if ((a > b + c) && (b > a + c) && (c > a + b)) // summa 2 storon doljna bqt bolshe tretjey
                     return true;
                 else return false;
             }
