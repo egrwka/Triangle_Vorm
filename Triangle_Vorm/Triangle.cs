@@ -11,11 +11,22 @@ namespace Triangle_Vorm
         public double a; // 1st stroka
         public double b; // 2st storka
         public double c; // 3th stroka
+        public double h; // 4rd stroka
+
         public Triangle(double A, double B, double C) // Konstryktor
         { 
             a = A; // Sozdaem s zadannqmi dlinami storon soglasno zadaniyu
             b = B;
             c = C;
+        }
+        public Triangle(double A, double H) // Konstryktor
+        {
+            a = A; 
+            h = H;
+        }
+        public Triangle() // Pystoy konstryktor
+        {
+           
         }
 
         public string outputA() // vqvodim storony A, dannqi metod vozrashaet strokovoe znachenie
@@ -69,6 +80,13 @@ namespace Triangle_Vorm
             set
             { c = value; }
         }
+        public double GetSetH
+        {
+            get
+            { return h; }
+            set
+            { h = value; }
+        }
 
         public bool ExistTriange // svoistvo pozvolyaeshee ystanovit, sywestvyet li treygolnik s zadannqmi storonami
         {
@@ -80,6 +98,4 @@ namespace Triangle_Vorm
             }
         }
     }
-
-
 }
