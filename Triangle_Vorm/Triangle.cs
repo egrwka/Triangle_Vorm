@@ -22,7 +22,7 @@ namespace Triangle_Vorm
         public Triangle(double A, double H) // Konstryktor
         {
             a = A; 
-            h = H;
+            h = H; // vqsota
         }
         public Triangle() // Pystoy konstryktor
         {
