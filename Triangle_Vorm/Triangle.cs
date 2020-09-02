@@ -58,6 +58,16 @@ namespace Triangle_Vorm
             s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
         }
+        public double Height()
+        {
+            return Surface() * 2 / a;
+        }
+
+        public double Median()
+        {
+            return (Math.Sqrt(2 * b * b + 2 * c * c - a * a) / 2);
+        }
+
 
         public double GetSetA // svoistvo pozvolyaeshee ystanovit libo izmenit znachenie storonq A
         {
@@ -92,7 +102,7 @@ namespace Triangle_Vorm
         {
             get
             {
-                if ((a > b + c) && (b > a + c) && (c > a + b)) // summa 2 storon doljna bqt bolshe tretjey
+                if ((a < b + c) && (b < a + c) && (c < a + b)) // summa 2 storon doljna bqt bolshe tretjey
                     return true;
                 else return false;
             }
