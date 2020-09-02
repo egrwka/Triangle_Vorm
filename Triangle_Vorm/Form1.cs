@@ -26,7 +26,7 @@ namespace Triangle_Vorm
 
             Triangle triangle = new Triangle(a, b, c);
             listView1.Items.Add("Сторона А");
-            listView1.Items.Add("Сторона B");
+            listView1.Items.Add("Сторона B")Б
             listView1.Items.Add("Сторона C");
             listView1.Items.Add("Периметр");
             listView1.Items.Add("Площадь");
