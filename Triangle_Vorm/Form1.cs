@@ -26,7 +26,7 @@ namespace Triangle_Vorm
 
             Triangle triangle = new Triangle(a, b, c);
             listView1.Items.Add("Сторона А");
-            listView1.Items.Add("Сторона B")Б
+            listView1.Items.Add("Сторона B");
             listView1.Items.Add("Сторона C");
             listView1.Items.Add("Периметр");
             listView1.Items.Add("Площадь");
@@ -43,6 +43,12 @@ namespace Triangle_Vorm
             listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Median()));
             if (triangle.ExistTriange) { listView1.Items[7].SubItems.Add("Существует"); }
             else listView1.Items[7].SubItems.Add("Не существует");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }

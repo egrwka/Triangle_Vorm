@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Triangle_Vorm
 {
@@ -106,6 +107,62 @@ namespace Triangle_Vorm
                     return true;
                 else return false;
             }
+        }
+
+        public string TriangleType()
+        {
+            string type = "";
+            if (a == b && b == c)
+            {
+                type = "Равносторонний";
+            }
+            else if ((a == b) && (a != c) || (b == c) && (b != a) || (a == c) && (a != b))
+            {
+                type = "Равнобедренный";
+            }
+            else if (a != b || b != c)
+            {
+                type = "Разносторонний";
+            }
+            else if (c * 2 == (a * 2 + b * 2))
+            {
+                type = "Правильный";
+            }
+            else if (c * 2 > (a * 2 + b * 2))
+            {
+                type = "Тупоугольный";
+            }
+            else if (c * 2 < (a * 2 + b * 2))
+            {
+                type = "Остроугольный";
+            }
+            return type;
+        }
+        public string Source()
+        {
+            string source = Application.StartupPath;
+            switch (TriangleType())
+            {
+                case "Равносторонний":
+                    source += "equilateral";
+                    break;
+                case "Равнобедренный":
+                    source += "isosceles";
+                    break;
+                case "Разносторонний":
+                    source += "scalane";
+                    break;
+                case "Правильный":
+                    source += "right";
+                    break;
+                case "Тупоугольный":
+                    source += "obtuse";
+                    break;
+                case "Остроугольный":
+                    source += "acute";
+                    break;
+            }
+            return source;
         }
     }
 }
